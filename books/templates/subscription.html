@@ -1,0 +1,12 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+		{% for item in orders %}
+            {{ item.book.title }} {{ item.book.author.first_name }} {{ item.book.author.last_name }}
+				{{ item.quantity }} x {{ item.book.price }}
+					Quantity: "{% url 'subscribe' item.book.id %}">[+] "{% url 'unsubscribe' item.book.id %}">[-]
+		{% No subscriptions %
+		{% endfor %}
+			Total: {{ total }}
+{% endblock %}

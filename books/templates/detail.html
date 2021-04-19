@@ -1,0 +1,15 @@
+
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block body %}
+
+        <div class="detail_book_display">
+            <span class="detail_book_title">{{book.title}}</span>
+            <span class="detail_book_author">{{book.author}}</span>
+            <div class="detail_book_desciption">{{ book.desription }}</div>
+
+        </div>
+
+{% endblock %}

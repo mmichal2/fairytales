@@ -1,3 +1,1 @@
-from django.contrib import admin
-
-# Register your models here.
+from django.contrib import admin# Register your models here.from .models import Author, Book, BookSubscription, Category, Subscriptionclass BookAdmin(admin.ModelAdmin):    display_list = ("title", "author", "price", "description")class AuthorAdmin(admin.ModelAdmin):    display_list = ("first_name", "last_name")class BookSubscriptionAdmin(admin.ModelAdmin):    display_list = ("book", "subscription", "quantity")admin.site.register(Author, AuthorAdmin)admin.site.register(Book, BookAdmin)admin.site.register(Category)admin.site.register(Subscription)admin.site.register(BookSubscription)

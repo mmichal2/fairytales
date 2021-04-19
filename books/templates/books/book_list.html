@@ -1,0 +1,21 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+{% extends "base.html" %}
+{% block content %}
+<h1>List of Books</h1>
+
+{% for book in object_list %}
+<ul>
+    <li>Title: {{ book.title }}</li>
+    <li>Author: {{ book.author }}</li>
+    <li>Category: {{ book.category }}</li>
+</ul>
+{% endfor %}
+{% endblock %}
+<!--</body>-->
+<!--</html>-->
